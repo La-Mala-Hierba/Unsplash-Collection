@@ -1,0 +1,40 @@
+server:
+  port: 80
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+    use-forward-headers: true
+prueba:
+  code:
+    client_id: ejcxMYgmWK3jRhq90P3UkVUDWWtsJ50DRCSqn4b_p10
+    redirect_uri: urn:ietf:wg:oauth:2.0:oob
+    response_type: code
+    scope: public
+    email: desarrollo@vivelibre.es
+    password: v1v3l1br3
+  token:
+    client_id: ejcxMYgmWK3jRhq90P3UkVUDWWtsJ50DRCSqn4b_p10
+    client_secret: swFAGG13O7nja0ZHvBVhw_N4gjx9gVLbf7YjTtxdf_g
+    redirect_uri: urn:ietf:wg:oauth:2.0:oob
+    grant_type: authorization_code
+    token: Bearer YtKiRo825g0FUSk6zNSAXkb-yXFOYGZdUTFQEAW6OHE
+spring:
+  application:
+    name: unsplash-collection
+  datasource:
+    url: jdbc:mysql://192.168.19.128:3306/unsplash?serverTimezone=UTC
+    username: root
+    password: heiya
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    generate-ddl: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
